@@ -1,17 +1,17 @@
 var gulp = require('gulp'),
-    less = require('gulp-less'),
+    sass = require('gulp-sass'),
+	minify = require('gulp-minify-css'),
     livereload = require('gulp-livereload');
 
-/*
- * gulp.task('compile-less', function() {
- *   gulp.src('./less/jkl.less')
- *     .pipe(less())
- *     .pipe(gulp.dest('./public'));
- * });
- */
+gulp.task('sass', function() {
+	gulp.src('./src/scss/*.scss')
+		.pipe(sass())
+		.pipe(minify())
+		.pipe(gulp.dest('./assets/css'));
+});
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch(['**/*.hbs', './**/*.css'], [livereload.changed]);
+  gulp.watch(['**/*.hbs', './src/scss/*.scss'], ['sass', livereload.changed]);
 });
 
