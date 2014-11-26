@@ -1,4 +1,47 @@
-/* Comment */
-h1 {
-	color: red;
+/* 
+
+Suspicious.website : The main theme
+
+ */
+
+/* Some initial colors */
+/* TODO: do a proper design */
+
+$background-color: #fffffd;
+$text-color: 262827;
+
+$link-color: #569c8f;
+$visited-color: #468c7f;
+
+$tag-background: $link-color;
+$tag-color:	white;
+
+body {
+	background: $background-color;
+	color: $text-color;
+}
+
+a {
+	border-color: $background-color;
+	color: $link-color;
+	text-decoration: none;
+	transition: all 1s ease;
+
+	&:visited {
+		color: $visited-color;
+	}
+
+	&:hover {
+		border-bottom: solid 1px $link-color;
+	}
+}
+
+.tags {
+	a {
+		padding: 4px 10px;
+		border-radius: 5px;
+		background: $tag-background;
+		font-weight: bold;
+		color: $tag-color;
+	}
 }
