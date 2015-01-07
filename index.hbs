@@ -5,37 +5,17 @@
 <header class="main-header">
     <section class="main-overlay clearfix">
 		<header>
-			<h1>Suspicious Website</h1>
-			<h2>Talks about Dev and Ops</h2>
+			<a class="scroll-down" href="#content"><h1>Suspicious.website</h1></a>
+			<div id="header-icons-front">
+				<img src="{{ asset 'images/GitHub64px.png' }}" />
+			</div>
+			<div>
+				<h2>Talks about Dev and Ops <span class="credits">by Markus Klinga</span></h2>
+			</div>
 		</header>
-		<div>
-			<ul id="index-menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Dev</a></li>
-				<li><a href="#">Ops</a></li>
-				<li><a href="#">Design</a></li>
-				<li><a href="#">Experiments</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-		<a class="scroll-down" href="#content" data-offset="-80">Scroll Down</a>
+		<!-- <a href="#content" class="scroll&#45;down scroll&#45;icon"><img src="{{ asset 'images/down&#45;arrow.png' }}"></a> -->
     </section>
 </header>
-
-{{! Navigation bar between the header and content }}
-<nav class="main-nav">
-    <div class="vertical">
-        <div class="main-header-content inner">
-			<ul>
-				<li>Home</li>
-				<li>Dev</li>
-				<li>Ops</li>
-				<li>About</li>
-			</ul>
-        </div>
-    </div>
-</nav>
-
 
 {{! The main content area on the homepage }}
 <main id="content" class="content" role="main">

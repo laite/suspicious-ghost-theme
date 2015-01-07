@@ -30,9 +30,8 @@ body {
 	color: $text-color;
 
 	&.home-template {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-			url("../images/homebanner.jpg");
-		// background-image: url(../images/homebanner.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+		url("../images/palmtree.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -71,45 +70,47 @@ header {
 		position: relative;
 
 		header {
-				position: absolute;
-				color: white;
-				margin: 0;
-				text-align: center;
-				padding-left: 5px;
-				text-shadow: 0px 3px 1px rgba(0,0,0, 0.15);
-				width: 100%;
+			position: absolute;
+			color: white;
+			margin: 0;
+			padding-left: 5px;
+			text-shadow: 0px 3px 1px rgba(0,0,0, 0.15);
 
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+			bottom: 50px;
+			left: 50px;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
 			h1 {
-				text-transform: uppercase;
-				font-size: 3rem;
+				color: white;
+				font-size: 4em;
 				margin: 0;
 			}
 
 			h2 {
-				font-size: 1rem;
+				font-size: 1em;
+			}
+
+			#header-icons-front {
+				float: left;
+				padding-right: 30px;
 			}
 		}
-	}
-}
 
-nav {
-	ul {
-		height: $main-nav-height;
-		margin: -80px 0 0 0;
+		.scroll-icon {
 
-		li {
-			display: inline-block;
-			line-height: $main-nav-height;
-			padding-right: 50px;
+			color: white;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 25px;
+			border: 1px solid white;
+			// border-radius: 5px;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
-	}
-	&.main-nav {
-		background: $background-color;
-		margin-top: -80px;
-		padding: 0;
 	}
 }
 
