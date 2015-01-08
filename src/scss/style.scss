@@ -10,117 +10,166 @@ Suspicious.website : The main theme
 $background-color: #fffffd;
 $text-color: 262827;
 
-$link-color: #569c8f;
+$link-color: #555b63;
 $visited-color: #468c7f;
 
 $tag-background: $link-color;
-$tag-color:	white;
+$tag-color:	black;
 
 /* Main navigation height */
 $main-nav-height: 80px;
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background: $background-color;
-	color: $text-color;
+  margin: 0;
+  padding: 0;
+  background: $background-color;
+  color: $text-color;
 
-	&.home-template {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-		url("../images/palmtree.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-	}
+  &.home-template {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../images/palmtree.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 a {
-	border-color: $background-color;
-	color: $link-color;
-	text-decoration: none;
-	transition: all 1s ease;
+  border-color: $background-color;
+  color: $link-color;
+  text-decoration: none;
+  transition: all 1s ease;
 
-	&:visited {
-		color: $visited-color;
-	}
+  &:visited {
+    color: $visited-color;
+  }
 
-	&:hover {
-		border-bottom: solid 1px $link-color;
-	}
+  &:hover {
+    border-bottom: solid 1px $link-color;
+  }
 }
 
 .tags {
-	a {
-		padding: 4px 10px;
-		border-radius: 5px;
-		background: $tag-background;
-		font-weight: bold;
-		color: $tag-color;
-	}
+  a {
+    color: $tag-color;
+    text-decoration: underline;
+  }
 }
 
 header {
-	&.main-header {
-		height: 100vh;
-		position: relative;
+  &.main-header {
+    height: 100vh;
+    position: relative;
 
-		header {
-			position: absolute;
-			color: white;
-			margin: 0;
-			padding-left: 5px;
-			text-shadow: 0px 3px 1px rgba(0,0,0, 0.15);
+    header {
+      position: absolute;
+      color: white;
+      margin: 0;
+      padding-left: 5px;
+      text-shadow: 0px 3px 1px rgba(0,0,0, 0.15);
 
-			bottom: 50px;
-			left: 50px;
-			// top: 50%;
-			// left: 50%;
-			// transform: translate(-50%, -50%);
-			h1 {
-				color: white;
-				font-size: 4em;
-				margin: 0;
-			}
+      bottom: 50px;
+      left: 50px;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      h1 {
+        color: white;
+        font-size: 4em;
+        margin: 0;
+      }
 
-			h2 {
-				font-size: 1em;
-			}
+      h2 {
+        font-size: 1em;
+      }
 
-			#header-icons-front {
-				float: left;
-				padding-right: 30px;
-			}
-		}
+      #header-icons-front {
+        float: left;
+        padding-right: 30px;
+      }
+    }
 
-		.scroll-icon {
+    .scroll-icon {
 
-			color: white;
-			text-transform: uppercase;
-			font-weight: bold;
-			padding: 25px;
-			border: 1px solid white;
-			// border-radius: 5px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 25px;
+      border: 1px solid white;
+      // border-radius: 5px;
 
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-	}
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 main {
 
-	&#content {
-		background: $background-color;
-		margin: 0;
-		padding: 25px;
 
-		min-height: 100vh;
-	}
+  &#content {
+    background: $background-color;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+
+    min-height: 100vh;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  article {
+
+    padding: 25px;
+
+    .post-header {
+      text-align: center;
+      margin: 25px 0;
+
+      .post-title {
+        margin: 5px 0;
+
+        a { 
+          color: #000;
+          font-size: xx-large;
+        }
+      }
+
+      .post-date {
+        font-size: small;
+        color: #aaa;
+      }
+    }
+
+    .post-excerpt {
+      padding: 10px;
+      max-width: 500px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  }
+}
+
+footer {
+  background: $background-color;
+
+  font-size: small;
+
+  & > section {
+    border-top: 1px solid #666;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+  }
 }
