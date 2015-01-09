@@ -166,10 +166,31 @@ footer {
   font-size: small;
 
   & > section {
-    border-top: 1px solid #666;
     text-align: center;
     max-width: 1000px;
     margin: auto;
     padding: 25px;
+    color: #666;
   }
 }
+
+article.post {
+
+  .post-header {
+    padding: 75px 10px;
+  }
+
+  .post-bottom-share {
+    padding-top: 50px;
+  }
+}
+
+/* The actual blog content */
+article.post .post-content {
+  blockquote {
+    border-left: 3px solid #900;
+    padding-left: 25px;
+    font-style: italic;
+  }
+}
+
