@@ -4,12 +4,13 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <h2 class="post-title"><a href="{{url}}">{{this.meta_title}}</a></h2>
         <!-- <span class="tags">{{tags prefix=" "}}</span> -->
         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
     </header>
     <section class="post-excerpt">
-        <p>{{excerpt words="50"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+        <!-- <p>{{excerpt words="50"}} <a class="read&#45;more" href="{{url}}">&#38;raquo;</a></p> -->
+		{{this.meta_description}}
     </section>
         
 </article>
