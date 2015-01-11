@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{! This is template for /markus }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+    {{! Everything inside the #post tags pulls data from the post }}
+
+        <header class="post-header">
+			<img src="{{ asset 'images/markus.jpg' }}">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+    </article>
+
+</main>
+{{/post}}
