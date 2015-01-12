@@ -7,19 +7,22 @@
 
 <main class="content" role="main">
 
-    <article class="{{post_class}}">
+    <article class="profile-page">
     {{! Everything inside the #post tags pulls data from the post }}
 
-        <header class="post-header">
-			<img src="{{ asset 'images/markus.jpg' }}">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
+    <header class="post-header">
+      <img src="{{ asset 'images/face_shadow.png' }}">
+      <div class="infobox">
+        <h1 class="post-title">{{title}}</h1>
+        <p>Developer &amp; Administrator</p>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <section class="post-content">
+      {{content}}
+    </section>
 
-        <section class="post-content">
-            {{content}}
-        </section>
+  </article>
 
-    </article>
-
-</main>
-{{/post}}
+  </main>
+  {{/post}}
