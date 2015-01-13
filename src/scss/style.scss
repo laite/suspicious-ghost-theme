@@ -18,8 +18,28 @@ $visited-color: #555;
 $tag-background: $link-color;
 $tag-color:	black;
 
-/* Main navigation height */
-$main-nav-height: 80px;
+/* Widths */
+$small-screen-width: 768px;
+$medium-screen-width: 1024px;
+$large-screen-width: 1200px;
+
+@mixin small {
+  @media (min-width: #{$small-screen-width} ) and (max-width: #{$medium-screen-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-screen-width} ) and (max-width: #{$large-screen-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-screen-width}) {
+    @content;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -31,7 +51,7 @@ body {
   background: $background-color;
   color: $text-color;
   font-family: 'Raleway', 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 1.3rem;
 
   &.home-template {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -117,15 +137,24 @@ header {
   &.small-header {
 
     max-width: 1000px;
+
     margin: auto;
 
     h1 {
+
       color: black;
-      font-size: 2em;
+      font-size: 1em;
       text-align: left;
       font-weight: normal;
       margin: 0;
-      padding: 50px 50px 50px 0;
+      padding: 25px 0 0 0;
+
+      @include large {
+        position: fixed;
+        left: 25px;
+        top: 25px;
+        padding: 0;
+      }
 
       img {
         position: relative;
@@ -157,7 +186,7 @@ main {
   }
 
   section {
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0 auto;
   }
 
@@ -220,6 +249,8 @@ article.post {
 
 /* The actual blog content */
 article.post .post-content {
+
+  padding: 25px 50px;
 
   p {
     line-height: 1.5em;
