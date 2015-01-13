@@ -218,31 +218,6 @@ article.post {
   }
 }
 
-/* MARKUS */
-article.profile-page {
-  .post-header {
-
-    max-width: 1000px;
-    margin: auto;
-
-    img {
-      float: left;
-      // width: 200px;
-    }
-    div.infobox {
-      text-align: left;
-      float: left;
-      padding: 25px;
-      display: inline;
-
-      p {
-        font-size: small;
-      }
-    }
-    
-  }
-}
-
 /* The actual blog content */
 article.post .post-content {
   blockquote {
