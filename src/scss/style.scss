@@ -7,6 +7,8 @@ Suspicious.website : The main theme
 /* Some initial colors */
 /* TODO: do a proper design */
 
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
 $background-color: #fffffd;
 $text-color: 262827;
 
@@ -23,15 +25,13 @@ $main-nav-height: 80px;
   box-sizing: border-box;
 }
 
-.clear {
-  clear: both;
-}
-
 body {
   margin: 0;
   padding: 0;
   background: $background-color;
   color: $text-color;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-size: 1em;
 
   &.home-template {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -116,31 +116,31 @@ header {
 
   &.small-header {
 
-	  max-width: 1000px;
-	  margin: auto;
+    max-width: 1000px;
+    margin: auto;
 
-      h1 {
-        color: black;
-        font-size: 2em;
-		text-align: left;
-		font-weight: normal;
-        margin: 0;
-		padding: 50px 50px 50px 0;
+    h1 {
+      color: black;
+      font-size: 2em;
+      text-align: left;
+      font-weight: normal;
+      margin: 0;
+      padding: 50px 50px 50px 0;
 
-		img {
-			position: relative;
-			top: 5px;
-		}
+      img {
+        position: relative;
+        top: 5px;
       }
+    }
 
-      h2 {
-        font-size: 1em;
-      }
+    h2 {
+      font-size: 1em;
+    }
 
-      #header-icons-front {
-        float: left;
-        padding-right: 30px;
-      }
+    #header-icons-front {
+      float: left;
+      padding-right: 30px;
+    }
   }
 }
 
@@ -220,10 +220,16 @@ article.post {
 
 /* The actual blog content */
 article.post .post-content {
+
+  p {
+    line-height: 1.5em;
+  }
+
   blockquote {
     border-left: 3px solid #900;
-    padding-left: 25px;
+    padding-left: 20px;
     font-style: italic;
+    font-size: smaller;
   }
 }
 
