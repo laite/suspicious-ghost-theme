@@ -23,6 +23,10 @@ $main-nav-height: 80px;
   box-sizing: border-box;
 }
 
+.clear {
+  clear: both;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -211,6 +215,31 @@ article.post {
 
   .post-bottom-share {
     padding-top: 50px;
+  }
+}
+
+/* MARKUS */
+article.profile-page {
+  .post-header {
+
+    max-width: 1000px;
+    margin: auto;
+
+    img {
+      float: left;
+      // width: 200px;
+    }
+    div.infobox {
+      text-align: left;
+      float: left;
+      padding: 25px;
+      display: inline;
+
+      p {
+        font-size: small;
+      }
+    }
+    
   }
 }
 
