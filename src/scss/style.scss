@@ -67,14 +67,14 @@ a {
   border-color: $background-color;
   color: $link-color;
   text-decoration: none;
-  transition: all 1s ease;
+  // transition: all 1s ease;
 
   &:visited {
     color: $visited-color;
   }
 
   &:hover {
-    border-bottom: solid 1px $link-color;
+    border-bottom: dashed 1px $link-color;
   }
 }
 
@@ -256,7 +256,7 @@ article.post .post-content {
     margin-top: 50px;
   }
 
-  h3 {
+  h3, h4 {
     margin-top: 40px;
   }
 
@@ -281,10 +281,13 @@ article.post .post-content {
 
   code {
     font-size: smaller;
+    border: 1px solid #aaa;
+    padding: 3px 5px;
+    border-radius: 2px;
   }
 
   blockquote {
-    border-left: 3px solid #900;
+    border-left: 3px solid #a30;
     padding-left: 20px;
     font-style: italic;
     font-size: smaller;
