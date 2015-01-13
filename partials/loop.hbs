@@ -11,11 +11,11 @@
 		{{/if}}
         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
     </header>
-    <section class="post-excerpt">
+    <section class="post-description">
 		{{#if this.meta_description}}
-			<p>{{this.meta_description}}<a class="read-more" href="{{url}}">&raquo;</a></p>
+			<a class="read-more" href="{{url}}">{{this.meta_description}}</a>
 		{{else}}
-			<p>{{excerpt words="50"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+			<a class="read-more" href="{{url}}">{{excerpt words="50"}}</a>
 		{{/if}}
     </section>
         
