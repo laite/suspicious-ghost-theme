@@ -67,14 +67,9 @@ a {
   border-color: $background-color;
   color: $link-color;
   text-decoration: none;
-  // transition: all 1s ease;
-
-  &:visited {
-    color: $visited-color;
-  }
 
   &:hover {
-    border-bottom: dashed 1px $link-color;
+    border-bottom: solid 1px #afaaaa;
   }
 }
 
@@ -241,8 +236,19 @@ article.post {
     padding: 75px 10px;
   }
 
-  .post-bottom-share {
+  .post-bottom {
+
+    text-align: right;
+    font-size: smaller;
     padding-top: 50px;
+
+    .share-icons-bottom {
+      float: right;
+    }
+    
+    .author-and-date {
+      float: left;
+    }
   }
 }
 
