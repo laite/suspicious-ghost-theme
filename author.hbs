@@ -4,24 +4,25 @@
 {{> "smallheader"}}
 
 {{! The main content area on the homepage }}
-<main class="content" role="main">
+<main class="content author" role="main">
 {{! Everything inside the #author tags pulls data from the author }}
 {{#author}}
 
-<section class="author-profile inner">
+<section class="author-profile">
 	<header class="post-header">
 		<img src="{{ asset 'images/markus.jpg' }}">
 	</header>
 
 	<h1 class="author-title">{{name}}</h1>
-	<h2 class="author-bio">{{bio}}</h2>
+	<h2 class="author-oneliner">Developer, Designer & occasional Sysadmin</h2>
+  <hr>
 	<div class="author-meta">
-		{{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-		{{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-		<span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+    <span class="author-job">Devops Specialist at <a href="http://sc5.io" alt="SC5">SC5</a></span><br>
+    {{#if location}}<span class="author-location icon-location">{{location}}</span><br>{{/if}}
+    <span><a href="mailto:laite@gmx.com">laite@gmx.com</a></span>
 	</div>
+  <div class="clear"></div>
 </section>
 {{/author}}
-
 
 </main>

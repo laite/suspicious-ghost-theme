@@ -316,6 +316,33 @@ article.post {
   }
 }
 
+/* Author page */
+main.author {
+  section.author-profile {
+    margin-top: 100px;
+
+    .post-header {
+      float: left;
+      margin-right: 30px;
+    }
+
+    h1 {
+      font-size: larger;
+      margin: 10px 0 0 0;
+    }
+
+    h2 {
+      font-size: smaller;
+      margin: 0;
+      padding-bottom: 0;
+    }
+
+    .author-meta {
+      font-size: 1em;
+    }
+  }
+}
+
 /* The actual blog content */
 article.post .post-content {
 
