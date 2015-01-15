@@ -16,7 +16,7 @@ $link-color: #aaa;
 $visited-color: #555;
 
 $tag-background: $link-color;
-$tag-color:	black;
+$tag-color:	#a30;
 
 /* Widths */
 $small-screen-width: 768px;
@@ -120,6 +120,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
+    .post-description {
+      a {
+        font-size: smaller;
+      }
+    }
   }
 }
 
@@ -130,13 +136,6 @@ a {
 
   &:hover {
     border-bottom: solid 1px #afaaaa;
-  }
-}
-
-.tags {
-  a {
-    color: $tag-color;
-    text-decoration: underline;
   }
 }
 
@@ -164,6 +163,8 @@ header {
       }
 
       h2 {
+        margin-top: 10px;
+        margin-left: 50px;
         font-size: 1em;
       }
 
@@ -244,13 +245,15 @@ main {
     margin: 0 auto;
   }
 
-  article {
+  article.post {
 
     padding: 25px;
 
     .post-header {
       text-align: center;
-      margin: 25px 0;
+      margin: 0;
+
+      padding: 60px 10px 40px 10px;
 
       .post-title {
         margin: 5px 0;
@@ -298,10 +301,17 @@ article.post {
 
   .post-bottom {
     font-size: smaller;
-    padding: 0 25px;
+    padding: 25px 25px;
+
+    .tags {
+      a {
+        color: $tag-color;
+        padding: 2px;
+      }
+    }
 
     .readmore {
-      margin-top: 20px;
+      // margin-top: 20px;
     }
   }
 }
