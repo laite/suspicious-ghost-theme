@@ -23,6 +23,12 @@ $small-screen-width: 768px;
 $medium-screen-width: 1024px;
 $large-screen-width: 1200px;
 
+@mixin verysmall {
+  @media (max-width: #{$small-screen-width}) {
+    @content;
+  }
+}
+
 @mixin small {
   @media (min-width: #{$small-screen-width} ) and (max-width: #{$medium-screen-width - 1px}) {
     @content;
@@ -39,6 +45,60 @@ $large-screen-width: 1200px;
   @media (min-width: #{$large-screen-width}) {
     @content;
   }
+}
+
+/* Icons */
+
+@font-face {
+    font-family: "suspicious-icons";
+    src:url("../fonts/suspicious-icons.eot");
+    src:url("../fonts/suspicious-icons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/suspicious-icons.woff") format("woff"),
+        url("../fonts/suspicious-icons.ttf") format("truetype"),
+        url("../fonts/suspicious-icons.svg#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "suspicious-icons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-github:before {
+    content: "\e600";
+}
+.icon-rss:before {
+    content: "\f601";
+}
+.icon-twitter:before {
+    content: "\f602";
+    font-size: 1.1em;
+}
+.icon-googleplus:before {
+    content: "\f603";
+}
+.icon-facebook:before {
+    content: "\f604";
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
 }
 
 * {
@@ -237,17 +297,11 @@ article.post {
   }
 
   .post-bottom {
-
-    text-align: right;
     font-size: smaller;
-    padding-top: 50px;
+    padding: 0 25px;
 
-    .share-icons-bottom {
-      float: right;
-    }
-    
-    .author-and-date {
-      float: left;
+    .readmore {
+      margin-top: 20px;
     }
   }
 }
@@ -298,8 +352,11 @@ article.post .post-content {
 
   pre code {
     padding: 10px 20px;
-    margin-left: 30px;
+    margin-left: 20px;
 
+    @include verysmall { margin-left: 0; }
+    @include small { margin-left: 0; }
+    
     background: white;
     border: none;
     border-radius: 0;
