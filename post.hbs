@@ -24,11 +24,6 @@ the {body} of the default.hbs template, which contains our header/footer. }}
   </section>
 
   <section class="post-bottom">
-    <section class="author-and-date">
-      {{#author}}
-      Post by <a href="{{url}}">{{name}}</a>
-      {{/author}}
-    </section>
     <section class="share-icons-bottom">
       <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -43,8 +38,11 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         <span class="hidden">Google+</span>
       </a>
     </section>
-    <section class="readmore">
-      <span>See all stories about {{tags separator=" &amp; "}}</span>
+    <section class="author-and-date">
+      {{#author}}
+      Written by <a href="{{url}}">{{name}}</a>
+      {{/author}}
+      <!-- on <span class="tags"> {{tags separator=" "}}</span> -->
     </section>
   </section>
 
