@@ -24,6 +24,9 @@ the {body} of the default.hbs template, which contains our header/footer. }}
   </section>
 
   <section class="post-bottom">
+    <section class="author-and-date">
+      {{#author}} By <span class="author-bottom"><a href="{{url}}">{{name}}</a></span> {{/author}}
+    </section>
     <section class="share-icons-bottom">
       <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -37,12 +40,6 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
       </a>
-    </section>
-    <section class="author-and-date">
-      {{#author}}
-      Written by <a href="{{url}}">{{name}}</a>
-      {{/author}}
-      <!-- on <span class="tags"> {{tags separator=" "}}</span> -->
     </section>
   </section>
 
