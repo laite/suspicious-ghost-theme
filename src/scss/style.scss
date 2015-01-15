@@ -272,7 +272,7 @@ article.post .post-content {
   }
 
   ul,ol {
-    margin: 25px 0;
+    margin: 35px 0 25px 25px;
 
     li {
       padding: 5px;
@@ -287,9 +287,27 @@ article.post .post-content {
 
   code {
     font-size: smaller;
-    border: 1px solid #aaa;
-    padding: 3px 5px;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
     border-radius: 2px;
+  }
+
+  pre {
+    border: none;
+  }
+
+  pre code {
+    padding: 10px 20px;
+    margin-left: 30px;
+
+    background: white;
+    border: none;
+    border-radius: 0;
+    border: solid 1px #555;
+  }
+
+  code:hover {
+    border-color: #000; // Codebox intensifies
   }
 
   blockquote {
