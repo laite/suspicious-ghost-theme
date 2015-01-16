@@ -428,10 +428,6 @@ article.post .post-content {
 
   pre code {
     padding: 10px 20px;
-    margin-left: 20px;
-
-    @include verysmall { margin-left: 0; }
-    @include small { margin-left: 0; }
 
     background: white;
     border: none;
