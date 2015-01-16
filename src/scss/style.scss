@@ -20,8 +20,8 @@ $tag-color:	#a30;
 
 /* Widths */
 $small-screen-width: 768px;
-$medium-screen-width: 1024px;
-$large-screen-width: 1200px;
+$medium-screen-width: 1200px;
+$large-screen-width: 1920px;
 
 @mixin verysmall {
   @media (max-width: #{$small-screen-width}) {
@@ -114,8 +114,12 @@ body {
   font-size: 1.3rem;
 
   &.home-template {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../images/palmtree_2440.jpg");
+
+    /* Select the background image based on the resolution */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/palmtree_1200.jpg");
+    @include large { background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/palmtree_2440.jpg"); }
+    @include medium { background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/palmtree_1920.jpg"); }
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -166,6 +170,38 @@ header {
         margin-top: 10px;
         margin-left: 50px;
         font-size: 1em;
+
+      }
+
+      @include verysmall {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      @include small {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+
+        h1 {
+          font-size: 3em;
+        }
+
+        h2 {
+          margin: 0;
+          font-size: 1em;
+        }
       }
 
       a {
