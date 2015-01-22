@@ -12,8 +12,9 @@ Suspicious.website : The main theme
 $background-color: #fffffd;
 $text-color: #262827;
 
-$link-color: #b14;
-$visited-color: #b14;
+$link-color: black;
+$post-link-color: #b14;
+$post-visited-color: #b14;
 
 $tag-background: $link-color;
 $tag-color:	#a30;
@@ -144,13 +145,24 @@ body {
       }
     }
   }
+
+  &.tag-template {
+    .post-description {
+      a {
+        color: black;
+        font-size: smaller;
+      }
+      a:hover {
+        border: none;
+      }
+    }
+  }
 }
 
 a {
   border-color: $background-color;
   color: $link-color;
   text-decoration: none;
-
   
   &:hover {
     border-bottom: solid 1px $link-color;
@@ -158,7 +170,7 @@ a {
 }
 
 a:visited {
-  color: $visited-color;
+  color: $post-visited-color;
 }
 
 header {
@@ -335,6 +347,7 @@ main {
 }
 
 footer {
+
   background: $background-color;
 
   font-size: small;
@@ -345,6 +358,16 @@ footer {
     margin: auto;
     padding: 25px;
     color: #666;
+  }
+
+  &.small-footer {
+    a {
+      color: #aaa;
+
+      &:hover {
+        border-bottom: solid 1px #aaa;
+      }
+    }
   }
 }
 
@@ -388,6 +411,7 @@ footer {
         a {
           font-size: x-large;
           padding: 5px;
+          color: #aaa;
 
           &:hover {
             color: black;
@@ -439,6 +463,14 @@ article.post .post-content {
   padding: 25px;
   font-size: 0.9em;
 
+  a {
+    border-color: $background-color;
+    color: $post-link-color;
+
+    &:hover {
+      border-bottom: solid 1px $post-link-color;
+    }
+  }
   h2 {
     margin-top: 50px;
   }
@@ -511,5 +543,12 @@ article.post .post-content {
 .ad-rss {
   padding: 25px;
   font-size: smaller;
+
+  a {
+    color: $post-link-color;
+    &:hover {
+      border-bottom: solid 1px $post-link-color;
+    }
+  }
 }
 
