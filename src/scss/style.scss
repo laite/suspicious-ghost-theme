@@ -465,6 +465,7 @@ article.post .post-content {
     border: 1px solid #ccc;
     padding: 2px 5px;
     border-radius: 2px;
+    white-space: nowrap;
   }
 
   pre {
@@ -478,6 +479,7 @@ article.post .post-content {
     border: none;
     border-radius: 0;
     border: solid 1px #555;
+    white-space: pre;
   }
 
   code:hover {
