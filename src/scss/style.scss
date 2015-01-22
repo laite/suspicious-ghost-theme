@@ -12,8 +12,8 @@ Suspicious.website : The main theme
 $background-color: #fffffd;
 $text-color: #262827;
 
-$link-color: #aaa;
-$visited-color: #555;
+$link-color: #b14;
+$visited-color: #b14;
 
 $tag-background: $link-color;
 $tag-color:	#a30;
@@ -150,9 +150,14 @@ a {
   color: $link-color;
   text-decoration: none;
 
+  
   &:hover {
-    border-bottom: solid 1px #afaaaa;
+    border-bottom: solid 1px $link-color;
   }
+}
+
+a:visited {
+  color: $visited-color;
 }
 
 header {
