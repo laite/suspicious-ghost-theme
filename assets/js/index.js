@@ -95,4 +95,11 @@
         });
 
     };
+
+    // Show author head on click
+    $('.author-bottom').on('click', function() {
+      console.log($('.author-image'));
+      $('.author-image').toggleClass('visible');
+    });
+
 })(jQuery, 'smartresize');

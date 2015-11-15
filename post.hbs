@@ -25,7 +25,8 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 
   <section class="post-bottom">
     <section class="author-and-date">
-      {{#author}} By <span class="author-bottom"><a href="{{url}}">{{name}}</a></span> {{/author}}
+      {{#author}} By <span class="author-bottom">{{name}}</span> {{/author}}<br/>
+      <a href="https://fi.linkedin.com/in/markusklinga"><img class="author-image" src="{{ asset 'images/markus.jpg' }}"></a>
     </section>
     <section class="share-icons-bottom">
       <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
@@ -43,9 +44,9 @@ the {body} of the default.hbs template, which contains our header/footer. }}
     </section>
   </section>
 
-
 </article>
 
+<div class="clear"></div>
 <section class="ad-rss">
   Did you like this? Subscribe to the <a href="/rss" alt="RSS feed">RSS feed</a> and never miss a post!
 </section>
@@ -55,3 +56,4 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 {{/post}}
 
 {{> "smallfooter" }}
+

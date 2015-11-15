@@ -394,9 +394,31 @@ footer {
 
       .author-and-date {
         float: left;
+        position: relative;
 
         @include verysmall { float: none; }
+
+        .author-bottom {
+          cursor: pointer;
+        }
+
+        .author-image {
+          position: absolute;
+          top: 0;
+          height: 0;
+          right: 0;
+          display: block;
+
+          transition: all 1s;
+        }
+
+        .author-image.visible {
+          height: 100px;
+          top: -100px;
+          transform: rotate(360deg);
+        }
       }
+
       .author-bottom {
         font-weight: bold;
         a {
